@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int i,s=0,r,k,m,t,j=0;
+clrscr();
+printf("enter the number");
+scanf("%d",&m);
+for(i=m;i>=1;i--)
+{
+for(j=1;j<=i;j++)
+{
+printf("%d",j);
+
+}
+for(k=1;k<=s;k++)
+{
+printf(" ");
+}
+s=s+2;
+for(j=i;j>=1;j--)
+{
+
+printf("%d",j) ;
+
+
+}
+printf("\n");
+}
+}
+
+
+
+

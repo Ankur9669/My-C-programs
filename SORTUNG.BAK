@@ -1,0 +1,45 @@
+#include<ankur.h>
+#include<stdlib.h>
+void sort(int a[], int m)
+{
+	int i;
+	int value;
+	int hole;
+	for (i = 0; i < 5; i++)
+	{
+	  value = a[i];
+	  hole = i;
+	  while (hole > 0 && value < a[hole - 1])
+	  {
+	    a[hole] = a[hole - 1];
+	    a[hole - 1] = value;
+	    hole = hole - 1;
+	  }
+	}
+}
+void print()
+{
+   int i;
+   for(i = 0; i < 5; i++)
+   {
+     printf(" %d ", a[i]);
+   }
+}
+   printf("%d",b);
+}
+void main()
+{
+	title();
+	int i;
+	static int a[5];
+	printf(" Enter the elements of the array: ");
+	for (i = 0; i < 5; i++)
+	{
+	  scanf("%d",&a[i]);
+	}
+       //	*b =sort(a, 1);
+       //	print(b);
+	sort(a, 1);
+	print();
+	getch();
+}

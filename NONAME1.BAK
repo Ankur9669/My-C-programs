@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+void main()
+{
+  clrscr();
+  int i,maxsize=7,ans;
+  srand(time(NULL));
+  ans=rand()%maxsize;
+  while(ans==0)
+  {
+   ans=rand()%maxsize;
+  }
+  cout<<ans;
+  getch();
+}

@@ -1,0 +1,37 @@
+#include<ankur.h>
+#include<stdlib.h>
+#include<string.h>
+void main()
+{
+	char str[100], ch, str1[100];
+	int n, j = 0;
+	clrscr();
+	do
+	{
+	  clrscr();
+	  printf("Enter the characters: ");
+	  scanf("%s", &ch);
+	  str[j] = ch;
+	  j++;
+	  printf("\nEnter 1 for more: ");
+	  scanf("%d", &n);
+	}while(n == 1);
+	str[j] = '\0';
+	printf("%s",str);
+	printf("\nEnter the string");
+	scanf("%s", str1);
+	if(strcmp(str, str1) == 0)
+	{
+	  printf("Correct");
+	}
+	else
+	{
+	  printf("Incorrect");
+	}
+	getch();
+}
+
+
+
+
+

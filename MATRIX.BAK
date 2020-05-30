@@ -1,0 +1,81 @@
+#include<ankur.h>
+#include<conio.h>
+#include<stdio.h>
+class Ankur
+{
+	public:
+	void convulation(int temp[5][5], int row, int col);
+	void print(int temp[3][3]);
+};
+
+void Ankur :: convulation(int temp[5][5], int row, int col)
+{
+	int i, j, temp1[3][3], rowCount= 0, colCount = 0, count = 0;
+	for (i = row; i <= row + 2; i++)
+	{
+	  for (j = col; j <= col + 2; j++)
+	  {
+	    temp1[rowCount][colCount] = temp[i][j];
+	    cout <<"temp is = "<< " " << i << " " << j;
+	    colCount++;
+	    count++;
+	  }
+	   rowCount++;
+	   colCount = 0;
+	   if(count == 9)
+	   {
+	     col = col + 1;
+	     i = 0;
+	     j = 0;
+	   }
+	   if(col == 3)
+	   {
+	     col = 0;
+	     row = row + 1;
+	   }
+       /*	   else
+	   {
+	     col = col - 3;
+	    // row = row - 3;
+	   }*/
+	}
+       print(temp1);
+}
+void Ankur :: print(int temp[3][3])
+{
+	int i, j;
+	for (i = 0; i < 3; i++)
+	{
+	  for (j = 0; j < 3; j++)
+	  {
+	    cout <<  " " <<temp[i][j];
+	  }
+	  cout << "\n";
+	}
+}
+void main()
+{
+	clrscr();
+	Ankur obj;
+	int matA[5][5], matB[5][5], i, j, k, row = 0, col = 0;
+	cout << "Enter Matrix A";
+	for (i = 0; i < 5; i++)
+	{
+	  for (j = 0; j < 5; j++)
+	  {
+	    cin >> matA[i][j];
+	  }
+	}
+	for (i = 0; i < 9; i++)
+	{
+	  obj.convulation(matA);
+	  col++;
+	  if(i % 4 == 0)
+	  {
+	    col = 0;
+	    row++;
+	  }
+	}
+
+       getch();
+}

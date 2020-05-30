@@ -1,0 +1,23 @@
+#include<stdio.h>
+void main()
+{
+int i,t,s=0,n=0,m,j=0;
+printf("enter the number ");
+scanf("%d",&m);
+while(m>0)
+{
+t=m ;
+m=m/10;
+n=n+1;
+}
+printf("%d",n);
+while(m>0)
+{
+t=t%10;
+s=s+t;
+}
+printf("%d",s);
+}
+
+
+
